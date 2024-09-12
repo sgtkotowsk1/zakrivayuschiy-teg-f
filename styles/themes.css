@@ -4,3 +4,18 @@
 ✦ theme-light — класс светлой темы
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
+
+:root.theme-light {
+    --main-text-color: var(--black-color, #000000);
+    --header-font-weight: 700;
+    --main-text-font-weight: 400;
+    --background-color: var(--white-color, #FFFFFF);
+}
+
+:root.theme-dark {
+    --main-text-color: var(--green-color, #00CC14);
+    --header-font-weight: 785;
+    --main-text-font-weight: 465;
+    --background-color: var(--black-color, #000000);
+}
+

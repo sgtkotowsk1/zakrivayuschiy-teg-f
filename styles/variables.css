@@ -1,1 +1,8 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+    --black-color: #000000;
+    --green-color: #00CC14;
+    --white-color: #FFFFFF;
+    --main-text-font: "Inter-Variable", sans-serif;
+    --header-text-font: "PressStart2P-Regular", sans-serif;
+}

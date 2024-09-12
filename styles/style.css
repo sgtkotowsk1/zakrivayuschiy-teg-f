@@ -17,4 +17,16 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-family: var(--main-text-font);
+  color: var(--main-text-color);
+  font-variation-settings: 'wght' var(--main-text-font-weight);
+  background-color: var(--background-color);
+}
+
+
+
+
+.floppy {
+  inline-size: 39px;
+  block-size: 39px;
 }
