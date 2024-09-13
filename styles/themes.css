@@ -19,3 +19,11 @@
     --background-color: var(--black-color, #000000);
 }
 
+@media (prefers-color-scheme: dark) {
+    :root {
+        --main-text-color: var(--green-color, #00CC14);
+        --header-font-weight: 785;
+        --main-text-font-weight: 465;
+        --background-color: var(--black-color, #000000);
+    }
+}

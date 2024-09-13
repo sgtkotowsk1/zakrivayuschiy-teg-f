@@ -23,6 +23,18 @@
   background-color: var(--background-color);
 }
 
+.header {
+  block-size: max(100vh, 668px);
+  background-image: var(--background-image);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+
+.header__title {
+  font-weight: var(--header-font-weight);
+}
 
 
 

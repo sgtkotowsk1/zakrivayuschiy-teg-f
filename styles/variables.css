@@ -5,4 +5,7 @@
     --white-color: #FFFFFF;
     --main-text-font: "Inter-Variable", sans-serif;
     --header-text-font: "PressStart2P-Regular", sans-serif;
+    --background-image: 
+        repeating-linear-gradient(90deg, #d3d3d3 2px, transparent 4px),
+        repeating-linear-gradient(#e7e7e7, #1a1a1a 2px);
 }
