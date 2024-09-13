@@ -29,13 +29,23 @@
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
+  padding: 100px 370px;
 }
 
+.header__block-welcome {
+  background-color: #FFFFFF;
+  padding: 136px 25px 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px
+}
 
 .header__title {
   font-weight: var(--header-font-weight);
+  font-size: clamp(49px, 1.502vw + 2.71rem, 65px);
 }
-
 
 
 .floppy {
