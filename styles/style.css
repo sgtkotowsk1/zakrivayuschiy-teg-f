@@ -20,33 +20,126 @@
   font-family: var(--main-text-font);
   color: var(--main-text-color);
   font-variation-settings: 'wght' var(--main-text-font-weight);
-  background-color: var(--background-color);
-}
-
-.header {
-  block-size: max(100vh, 668px);
   background-image: var(--background-image);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  padding: 100px 370px;
+  font-size: 18px;
+  padding: 0 var(--side-margin);
 }
 
-.header__block-welcome {
+.header {
+  padding: 120px 14px 25px;
   background-color: #FFFFFF;
-  padding: 136px 25px 120px;
+  background-color: var(--background-color);
   display: flex;
   flex-direction: column;
-  align-items: center;
+  border: 2px solid black;
+  font-weight: var(--header-font-weight);
   justify-content: center;
-  gap: 10px
+  align-items: center;
+  margin-block: 100px;
+}
+
+.header__welcome {
+  font-family: var(--header-text-font);
+  text-align: center;
 }
 
 .header__title {
-  font-weight: var(--header-font-weight);
   font-size: clamp(49px, 1.502vw + 2.71rem, 65px);
+  margin-block-end: 20px;
 }
 
+.header__subtitle {
+  margin-block-end: 23px;
+  font-size: clamp(14px, 0.845vw + 0.677rem, 23px);
+  text-transform: uppercase;
+}
+
+.theme-menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-inline-start: 20px;
+}
+
+.theme-menu__button {
+  border: none;
+  background-color: transparent;
+  font-size: 14px;
+  font-family: var(--header-text-font);
+  text-transform: uppercase;
+  position: relative;
+}
+
+.main {
+  display: grid;
+  gap: 50px;
+}
+
+.main__content_list {
+  list-style-type: none;
+  display: grid;
+  place-content: center;
+}
+
+.main__content_card {
+  border: 2px soild #000000;
+  display: grid;
+}
+
+
+.main__content_header {
+  font-variation-settings: 'wght' var(--header-font-weight);
+  padding: 4px 10px;
+  font-size: 18px;
+  line-height: 21.78px;
+}
+
+.main__content_elem {
+  background-color: var(--background-color);
+}
+
+.main__content_text {
+  margin: 25px 29px 27px 25px;
+  line-height: 21px;
+}
+
+.main__content_img {
+  object-fit:cover;
+  object-position: center;
+  inline-size: 100%;
+  block-size: 100%;
+  display: block;
+}
+
+.theme-menu__button:disabled {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.theme-menu__button:hover {
+  cursor: pointer;
+}
+
+.theme-menu__button:disabled::before {
+  content: "▶";
+  position: absolute;
+  inset-inline-start: -15px;
+  opacity: 0.6;
+  animation: active_theme 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes active_theme {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(4px);
+  }
+}
 
 .floppy {
   inline-size: 39px;

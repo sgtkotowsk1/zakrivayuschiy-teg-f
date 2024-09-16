@@ -18,9 +18,10 @@
   </head>
   <body class="page">
     <header class="header">
-      <div class="header__block-welcome">
+      <div class="header__welcome">
         <h1 class="header__title">&lt;/HTML&gt;</h1>
         <h2 class="header__subtitle">закрывающий тег</h2>
+      </div>
         <nav class="theme-menu header__theme-menu">
           <!-- Не меняйте разметку этого списка, иначе скрипты перестанут работать -->
           <ul class="theme-menu__list">
@@ -47,8 +48,33 @@
           </ul>
       </nav>
     </header>
-    </div>
-    <main>
+    <main class="main">
+      <ul class="main__content_list">
+        <li class="main__content_elem">
+          <article class="main__content_card">
+            <h3 class="main__content_header">Фритрек и нулевой спринт: Подготовка к работе</h3>
+            <div class="main__content_imgWrapper">
+              <span main__content_imgLogo></span>
+              <picture>
+                <source srcset="./images/image-bus.avif" type="image/avif" />
+                <source srcset="./images/image-bus.webp" type="image/webp" />
+                <img
+                  src="./images/image-bus.png"
+                  class="main__content_img"
+                  alt="Автобус, стоящий под деревом на фоне звездного неба. Пиксельное изображение напоминающее стиль 8-bit"
+                  loading="lazy"
+                />
+              </picture>
+            </div>
+            <div class="main__content_textWrapper">
+              <p class="main__content_text">Это было самое начало пути. На этом этапе важно было проникнуться основами и настроиться на учёбу. 
+                И, возможно, подумать, как новые знания могут повлиять на ваше будущее.</p>
+              <p class="main__content_text">Место для ваших воспоминаний о начале обучения.</p>
+            </div>
+            <button class="Like_button">Like</button>
+          </article>
+        </li>
+      </ul>
       
     </main>
     <div>

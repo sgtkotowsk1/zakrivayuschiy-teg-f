@@ -3,8 +3,11 @@
     --black-color: #000000;
     --green-color: #00CC14;
     --white-color: #FFFFFF;
-    --main-text-font: "Inter-Variable", sans-serif;
-    --header-text-font: "PressStart2P-Regular", sans-serif;
+    --header-font-weight: 700;
+    --main-text-font-weight: 400;
+    --main-text-font: "Inter", sans-serif;
+    --header-text-font: "PressStart2P", sans-serif;
+    --side-margin: clamp(0rem, 35.211vw - 8.253rem, 23.438rem);
     --background-image: 
         repeating-linear-gradient(90deg, #d3d3d3 2px, transparent 4px),
         repeating-linear-gradient(#d3d3d3 2px, transparent 4px),
