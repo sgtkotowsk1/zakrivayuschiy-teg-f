@@ -10,6 +10,11 @@
     --header-font-weight: 700;
     --main-text-font-weight: 400;
     --background-color: var(--white-color, #FFFFFF);
+    --border-color: var(--black-color, #000000);
+    --background-image: 
+    repeating-linear-gradient(90deg, #d3d3d3 2px, transparent 4px),
+    repeating-linear-gradient(#d3d3d3 2px, transparent 4px),
+    linear-gradient(#e7e7e7 0.01%, #1a1a1a);
 }
 
 :root.theme-dark {
@@ -17,6 +22,11 @@
     --header-font-weight: 785;
     --main-text-font-weight: 465;
     --background-color: var(--black-color, #000000);
+    --border-color: var(--green-color, #00CC14);
+    --background-image: 
+    repeating-linear-gradient(90deg, #000 2px, transparent 4px),
+    repeating-linear-gradient(#000 2px, transparent 4px),
+    linear-gradient(#007f0c 0.01%, #004306);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -25,5 +35,9 @@
         --header-font-weight: 785;
         --main-text-font-weight: 465;
         --background-color: var(--black-color, #000000);
+        --background-image: 
+        repeating-linear-gradient(90deg, #000 2px, transparent 4px),
+        repeating-linear-gradient(#000 2px, transparent 4px),
+        linear-gradient(#007f0c 0.01%, #004306);
     }
 }
