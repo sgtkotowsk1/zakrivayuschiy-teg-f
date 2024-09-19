@@ -3,6 +3,7 @@
     --black-color: #000000;
     --green-color: #00CC14;
     --white-color: #FFFFFF;
+    --red-color: #F20000;
     --header-font-weight: 700;
     --main-text-font-weight: 400;
     --main-text-font: "Inter", sans-serif;
@@ -11,8 +12,11 @@
     --border-color: var(--black-color, #000000);
     --button-text-color: var(--white-color, #FFFFFF);
     --side-padding-header: clamp(0px, 35.211vw - 8.253rem, 371px);
-    --side-padding-footer: clamp(2rem, 13.709vw - 1.213rem, 11.125rem);
     --header-padding-top: clamp(7.5rem, 1.502vw + 7.148rem, 8.5rem);
+    --modal-side-padding: clamp(1.75rem, 116.667vw - 23.115rem, 2.625rem);
+    --heart-contour-color: var(--black-color, #000000);
+
+    --heart-fill-color: var(--red-color, #F20000);
     
     
     --background-image: 

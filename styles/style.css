@@ -14,6 +14,34 @@
 
 */
 
+.brightness {
+  filter: brightness(50%)
+}
+
+.contrast {
+  filter: contrast(150%)
+}
+
+.blur {
+  filter: blur(10px);
+} 
+
+.opacity {
+  filter: opacity(0.6)
+}
+
+.grayscale {
+  filter: grayscale(1)
+}
+
+.hue-rotate {
+  filter: hue-rotate(-90deg);
+} 
+
+.multi-filer {
+  filter: sepia(1) invert(0.3) saturate(45%)
+}
+
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
@@ -113,11 +141,6 @@
   position: relative;
 }
 
-.main {
-  border: 2px solid var(--border-color);
-  display: grid;
-  gap: 50px;
-}
 
 .main__content_list {
   list-style-type: none;
@@ -130,7 +153,7 @@
   padding: 4px 10px;
   font-size: 18px;
   line-height: 21.78px;
-  border-block-end: 2px solid var(--border-color);
+  border: 2px solid var(--border-color);
 }
 
 .main__content_elem {
@@ -141,6 +164,8 @@
 
 .main__content_textWrapper {
   padding: 25px;
+  border: 2px solid currentColor;
+  border-block-end: none;
 }
 
 .main__content_text:not(:last-of-type) {
@@ -153,8 +178,8 @@
 
 .main__content_imgWrapper {
   position: relative;
-  border-block-end: 2px solid currentColor;
   overflow:hidden;
+  border-inline: 2px solid currentColor;
 }
 
 .main__content_imgLogo {
@@ -183,6 +208,8 @@
   gap: 4px;
   padding-inline-end: 25px;
   padding-block-end: 25px;
+  border: 2px solid currentColor;
+  border-block-start: none;
 }
 
 .card__icon-button {
@@ -204,6 +231,7 @@
 
 .button {  
   display: flex;
+  justify-content: center;
   position: relative;
   border: 2px solid currentColor;
   background-color: var(--background-color);
@@ -247,12 +275,14 @@
   font-family: var(--header-text-font, sans-serif);
   mix-blend-mode: difference;
   color: var(--button-text-color);
+  
 }
 
 .footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
 
 .floppy {
@@ -265,13 +295,68 @@
 
 .save-button {  
   display: flex;
-  padding: 15px 20px;
+  padding: 13px 20px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 10px;
-  margin: 50px var(--side-padding-footer) 100px;
+  margin: 50px auto 100px;
 }
+
+
+.modal {
+  background-color: var(--background-color);
+  gap: 30px;
+  line-height: 1.5;
+  padding: 30px var(--modal-side-padding);
+  font-size: 14px;
+  z-index: 10;
+  border: 2px solid var(--border-color);
+  max-inline-size: 341px;
+  font-family: var(--header-text-font);
+  text-transform: uppercase;
+  color: var(--main-text-color);
+  position: fixed;
+  inset: 0;
+  transition: opacity 0.3s ease-in-out;
+  display: grid;
+}
+.modal:not([open]) {
+  opacity: 0;
+  pointer-events: none;
+}
+.modal-content {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.modal[open] {
+  display: grid;
+  grid-template-rows: repeat(2, min-content);
+  gap: 30px;
+}
+
+
+
+.modal-floppy {
+  inline-size: 39px;
+  block-size: 39px;
+  flex-shrink: 0;
+  color: var(--main-text-color);
+}
+
+.modal__button {
+  inline-size: 100%;
+  text-align: center;
+}
+
+
+.modal::backdrop {
+  opacity: 0.75;
+  background: var(--black-color, #000000);
+}
+
 
 @media (min-width: 1440px) {
   .save-button {
