@@ -6,48 +6,57 @@
 */
 
 :root.theme-light {
-    --main-text-color: var(--black-color, #000000);
-    --header-font-weight: 700;
-    --main-text-font-weight: 400;
-    --background-color: var(--white-color, #FFFFFF);
-    --border-color: var(--black-color, #000000);
-    --button-text-color: var(--white-color, #FFFFFF);
-    --heart-contour-color: var(--black-color, #000000);
-    --fill-color: var(--red-color, #F20000);
-    --background-image: 
-    repeating-linear-gradient(90deg, #d3d3d3 2px, transparent 4px),
+  --main-text-color: var(--black-color, #000000);
+  --header-font-weight: 700;
+  --main-text-font-weight: 400;
+  --background-color: var(--white-color, #ffffff);
+  --border-color: var(--black-color, #000000);
+  --button-text-color: var(--white-color, #ffffff);
+  --heart-contour-color: var(--black-color, #000000);
+  --fill-color: var(--red-color, #f20000);
+  --background-image: repeating-linear-gradient(
+      90deg,
+      #d3d3d3 2px,
+      transparent 4px
+    ),
     repeating-linear-gradient(#d3d3d3 2px, transparent 4px),
     linear-gradient(#e7e7e7 0.01%, #1a1a1a);
 }
 
 :root.theme-dark {
-    --main-text-color: var(--green-color, #00CC14);
-    --header-font-weight: 785;
-    --main-text-font-weight: 465;
-    --background-color: var(--black-color, #000000);
-    --border-color: var(--green-color, #00CC14);
-    --button-text-color: var(--green-color, #00CC14);
-    --heart-contour-color: var(--green-color, #000000);
-    --fill-color: var(--red-color, #F20000);
-    --background-image: 
-    repeating-linear-gradient(90deg, #000 2px, transparent 4px),
+  --main-text-color: var(--green-color, #00cc14);
+  --header-font-weight: 785;
+  --main-text-font-weight: 465;
+  --background-color: var(--black-color, #000000);
+  --border-color: var(--green-color, #00cc14);
+  --button-text-color: var(--green-color, #00cc14);
+  --heart-contour-color: var(--green-color, #000000);
+  --fill-color: var(--red-color, #f20000);
+  --background-image: repeating-linear-gradient(
+      90deg,
+      #000 2px,
+      transparent 4px
+    ),
     repeating-linear-gradient(#000 2px, transparent 4px),
     linear-gradient(#007f0c 0.01%, #004306);
 }
 
 @media (prefers-color-scheme: dark) {
-    :root {
-        --main-text-color: var(--green-color, #00CC14);
-        --header-font-weight: 785;
-        --main-text-font-weight: 465;
-        --background-color: var(--black-color, #000000);
-        --border-color: var(--green-color, #00CC14);
-        --button-text-color: var(--green-color, #00CC14);
-        --heart-contour-color: var(--green-color, #000000);
-        --fill-color: var(--red-color, #F20000);
-        --background-image: 
-        repeating-linear-gradient(90deg, #000 2px, transparent 4px),
-        repeating-linear-gradient(#000 2px, transparent 4px),
-        linear-gradient(#007f0c 0.01%, #004306);
-    }
+  :root {
+    --main-text-color: var(--green-color, #00cc14);
+    --header-font-weight: 785;
+    --main-text-font-weight: 465;
+    --background-color: var(--black-color, #000000);
+    --border-color: var(--green-color, #00cc14);
+    --button-text-color: var(--green-color, #00cc14);
+    --heart-contour-color: var(--green-color, #000000);
+    --fill-color: var(--red-color, #f20000);
+    --background-image: repeating-linear-gradient(
+        90deg,
+        #000 2px,
+        transparent 4px
+      ),
+      repeating-linear-gradient(#000 2px, transparent 4px),
+      linear-gradient(#007f0c 0.01%, #004306);
+  }
 }

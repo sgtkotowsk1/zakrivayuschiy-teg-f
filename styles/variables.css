@@ -1,26 +1,28 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
-    --black-color: #000000;
-    --green-color: #00CC14;
-    --white-color: #FFFFFF;
-    --red-color: #F20000;
-    --header-font-weight: 700;
-    --main-text-font-weight: 400;
-    --main-text-font: "Inter", sans-serif;
-    --header-text-font: "PressStart2P", sans-serif;
-    --background-color: #FFFFFF;
-    --border-color: var(--black-color, #000000);
-    --button-text-color: var(--white-color, #FFFFFF);
-    --side-padding-header: clamp(0px, 35.211vw - 8.253rem, 371px);
-    --header-padding-top: clamp(7.5rem, 1.502vw + 7.148rem, 8.5rem);
-    --modal-side-padding: clamp(1.75rem, 116.667vw - 23.115rem, 2.625rem);
-    --heart-contour-color: var(--black-color, #000000);
+  --black-color: #000000;
+  --green-color: #00cc14;
+  --white-color: #ffffff;
+  --red-color: #f20000;
+  --header-font-weight: 700;
+  --main-text-font-weight: 400;
+  --main-text-font: "Inter", sans-serif;
+  --header-text-font: "PressStart2P", fantasy;
+  --background-color: #ffffff;
+  --border-color: var(--black-color, #000000);
+  --button-text-color: var(--white-color, #ffffff);
+  --side-padding-header: clamp(1.875rem, -1.127vw + 2.889rem, 2.625rem);
+  --header-padding-top: clamp(7.5rem, 1.502vw + 7.148rem, 8.5rem);
+  --modal-side-padding: clamp(1.75rem, 116.667vw - 23.115rem, 2.625rem);
+  --heart-contour-color: var(--black-color, #000000);
 
-    --heart-fill-color: var(--red-color, #F20000);
-    
-    
-    --background-image: 
-        repeating-linear-gradient(90deg, #d3d3d3 2px, transparent 4px),
-        repeating-linear-gradient(#d3d3d3 2px, transparent 4px),
-        linear-gradient(#e7e7e7 0.01%, #1a1a1a);
+  --heart-fill-color: var(--red-color, #f20000);
+
+  --background-image: repeating-linear-gradient(
+      90deg,
+      #d3d3d3 2px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(#d3d3d3 2px, transparent 4px),
+    linear-gradient(#e7e7e7 0.01%, #1a1a1a);
 }

@@ -15,31 +15,31 @@
 */
 
 .brightness {
-  filter: brightness(50%)
+  filter: brightness(50%);
 }
 
 .contrast {
-  filter: contrast(150%)
+  filter: contrast(150%);
 }
 
 .blur {
   filter: blur(10px);
-} 
+}
 
 .opacity {
-  filter: opacity(0.6)
+  filter: opacity(0.6);
 }
 
 .grayscale {
-  filter: grayscale(1)
+  filter: grayscale(1);
 }
 
 .hue-rotate {
   filter: hue-rotate(-90deg);
-} 
+}
 
 .multi-filer {
-  filter: sepia(1) invert(0.3) saturate(45%)
+  filter: sepia(1) invert(0.3) saturate(45%);
 }
 
 .page {
@@ -47,7 +47,7 @@
   min-block-size: 100dvb;
   font-family: var(--main-text-font);
   color: var(--main-text-color);
-  font-variation-settings: 'wght' var(--main-text-font-weight);
+  font-variation-settings: "wght" var(--main-text-font-weight);
   background-image: var(--background-image);
   background-position: center;
   background-size: cover;
@@ -65,7 +65,7 @@
   font-weight: var(--header-font-weight);
   justify-content: center;
   align-items: center;
-  margin-block: 100px 
+  margin-block: 100px;
 }
 
 .header__welcome {
@@ -87,7 +87,7 @@
 .theme-menu__list {
   display: flex;
   flex-direction: column;
-  gap: 7px;
+  gap: 6px;
   padding-inline-start: 20px;
 }
 
@@ -141,7 +141,6 @@
   position: relative;
 }
 
-
 .main__content_list {
   list-style-type: none;
   display: grid;
@@ -149,7 +148,7 @@
 }
 
 .main__content_header {
-  font-variation-settings: 'wght' var(--header-font-weight);
+  font-variation-settings: "wght" var(--header-font-weight);
   padding: 4px 10px;
   font-size: 18px;
   line-height: 21.78px;
@@ -169,7 +168,7 @@
 }
 
 .main__content_text:not(:last-of-type) {
-  margin-block-end: 25px;
+  margin-block-end: 26px;
 }
 
 .main__content_text {
@@ -178,7 +177,7 @@
 
 .main__content_imgWrapper {
   position: relative;
-  overflow:hidden;
+  overflow: hidden;
   border-inline: 2px solid currentColor;
 }
 
@@ -191,10 +190,11 @@
   mix-blend-mode: hard-light;
   font-size: 14px;
   font-family: var(--header-text-font);
+  opacity: 0.5;
 }
 
 .main__content_img {
-  object-fit:cover;
+  object-fit: cover;
   object-position: center;
   inline-size: 100%;
   aspect-ratio: 1/1;
@@ -229,21 +229,18 @@
   border-color: var(--main-text-color);
 }
 
-.button {  
-  display: flex;
-  justify-content: center;
+.button {
   position: relative;
   border: 2px solid currentColor;
   background-color: var(--background-color);
   appearance: none;
   font-size: 14px;
-  padding: 12px 35px;
+  padding: 8px 35px;
 }
 
-.button::after {
+.button::before {
   content: "";
   transform: scaleX(0);
-  z-index: 1;
   position: absolute;
   inset: 0;
   transition: transform 0.5s ease-in-out;
@@ -255,7 +252,7 @@
   cursor: pointer;
 }
 
-.button:hover::after {
+.button:hover::before {
   transform: scaleX(1);
 }
 
@@ -269,31 +266,27 @@
 }
 
 .button__text {
-  z-index: 2;
   font-size: 14px;
   line-height: 12.6px;
   font-family: var(--header-text-font, sans-serif);
   mix-blend-mode: difference;
   color: var(--button-text-color);
-  
 }
 
 .footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
 
 .floppy {
-  z-index: 2;
   inline-size: 30px;
   mix-blend-mode: difference;
   block-size: 30px;
   color: var(--button-text-color);
 }
 
-.save-button {  
+.save-button {
   display: flex;
   padding: 13px 20px;
   flex-direction: column;
@@ -303,14 +296,12 @@
   margin: 50px auto 100px;
 }
 
-
 .modal {
   background-color: var(--background-color);
   gap: 30px;
   line-height: 1.5;
-  padding: 30px var(--modal-side-padding);
+  padding: 30px 42px;
   font-size: 14px;
-  z-index: 10;
   border: 2px solid var(--border-color);
   max-inline-size: 341px;
   font-family: var(--header-text-font);
@@ -321,10 +312,12 @@
   transition: opacity 0.3s ease-in-out;
   display: grid;
 }
+
 .modal:not([open]) {
   opacity: 0;
   pointer-events: none;
 }
+
 .modal-content {
   display: flex;
   align-items: center;
@@ -337,7 +330,9 @@
   gap: 30px;
 }
 
-
+dialog::backdrop {
+  background-color: rgb(0 0 0 / 0.75);
+}
 
 .modal-floppy {
   inline-size: 39px;
@@ -351,13 +346,6 @@
   text-align: center;
 }
 
-
-.modal::backdrop {
-  opacity: 0.75;
-  background: var(--black-color, #000000);
-}
-
-
 @media (min-width: 1440px) {
   .save-button {
     flex-direction: row;
@@ -366,5 +354,13 @@
     inline-size: 22px;
     block-size: 22px;
   }
+  /*без этого костыля на десктопе карточки уезжают не по макету*/
+  .main__content_list {
+    gap: 53px;
+  }
+
+  .modal {
+    max-inline-size: 353px;
+    padding: 30px 30px;
+  }
 }
-  
