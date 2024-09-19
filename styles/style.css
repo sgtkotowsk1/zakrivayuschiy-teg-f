@@ -329,7 +329,6 @@
   transition: opacity 2s ease-in-out;
   display: grid;
   grid-template-rows: repeat(2, min-content);
-  gap: 30px;
 }
 
 .modal:not([open]) {
