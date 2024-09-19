@@ -13,7 +13,6 @@
   --border-color: var(--black-color, #000000);
   --button-text-color: var(--white-color, #ffffff);
   --heart-contour-color: var(--black-color, #000000);
-  --fill-color: var(--red-color, #f20000);
   --background-image: repeating-linear-gradient(
       90deg,
       #d3d3d3 2px,
@@ -30,8 +29,7 @@
   --background-color: var(--black-color, #000000);
   --border-color: var(--green-color, #00cc14);
   --button-text-color: var(--green-color, #00cc14);
-  --heart-contour-color: var(--green-color, #000000);
-  --fill-color: var(--red-color, #f20000);
+  --heart-contour-color: var(--green-color, #00cc14);
   --background-image: repeating-linear-gradient(
       90deg,
       #000 2px,
@@ -49,8 +47,7 @@
     --background-color: var(--black-color, #000000);
     --border-color: var(--green-color, #00cc14);
     --button-text-color: var(--green-color, #00cc14);
-    --heart-contour-color: var(--green-color, #000000);
-    --fill-color: var(--red-color, #f20000);
+    --heart-contour-color: var(--green-color, #00cc14);
     --background-image: repeating-linear-gradient(
         90deg,
         #000 2px,

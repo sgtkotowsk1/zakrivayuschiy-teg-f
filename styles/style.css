@@ -54,6 +54,8 @@
   background-attachment: fixed;
   font-size: 18px;
   padding: 0 var(--side-padding-header);
+  display: grid;
+  place-content: center;
 }
 
 .header {
@@ -65,6 +67,7 @@
   font-weight: var(--header-font-weight);
   justify-content: center;
   align-items: center;
+  max-inline-size: 700px;
   margin-block: 100px;
 }
 
@@ -73,16 +76,13 @@
   text-align: center;
 }
 
-.header__title {
+.header__logo {
   font-size: clamp(49px, 1.502vw + 2.71rem, 65px);
   margin-block-end: 20px;
+  display: block;
 }
 
-.link {
-  cursor: pointer;
-}
-
-.header__subtitle {
+.header__title {
   margin-block-end: 22px;
   font-size: clamp(14px, 0.845vw + 0.677rem, 23px);
   text-transform: uppercase;
@@ -97,7 +97,6 @@
 
 .theme-menu__button:disabled {
   opacity: 0.6;
-  transition: opacity 0.6s ease;
   pointer-events: none;
 }
 
@@ -113,10 +112,10 @@
 .theme-menu__button:hover {
   cursor: pointer;
   opacity: 0.6;
-  transition: opacity 0.6s ease;
 }
 
-.theme-menu__button:focus {
+.theme-menu__button:focus,
+.theme-menu__button:active {
   outline: none;
 }
 
@@ -132,7 +131,7 @@
   content: "▶";
   position: absolute;
   inset-inline-start: -15px;
-  opacity: 0.6;
+  inset-block-start: 1px;
   animation: active_theme 0.5s ease-in-out infinite alternate;
 }
 
@@ -143,6 +142,12 @@
   font-family: var(--header-text-font);
   text-transform: uppercase;
   position: relative;
+  transition: opacity 0.3s ease;
+}
+
+.main {
+  max-inline-size: 700px;
+  margin: 0 auto;
 }
 
 .main__content_list {
@@ -155,7 +160,7 @@
   font-variation-settings: "wght" var(--header-font-weight);
   padding: 4px 10px;
   font-size: 18px;
-  line-height: 21.78px;
+  line-height: 1.21;
   border: 2px solid var(--border-color);
 }
 
@@ -165,7 +170,7 @@
   gap: 50px;
 }
 
-.main__content_textWrapper {
+.main__content_text_wrapper {
   padding: 25px;
   border: 2px solid currentColor;
   border-block-end: none;
@@ -176,24 +181,25 @@
 }
 
 .main__content_text {
-  line-height: 21px;
+  line-height: 1.17;
 }
 
-.main__content_imgWrapper {
+.main__content_img_wrapper {
   position: relative;
   overflow: hidden;
   border-inline: 2px solid currentColor;
 }
 
-.main__content_imgLogo {
+.main__content_img_logo {
   position: absolute;
-  text-transform: uppercase;
+  z-index: 1;
   text-shadow: 0 0 1px var(--background-color, #ffffff);
-  inset-inline-end: 11px;
-  inset-block-start: 22px;
+  inset-inline-end: 13px;
+  inset-block-start: 25px;
   mix-blend-mode: hard-light;
   font-size: 14px;
   font-family: var(--header-text-font);
+  color: var(--main-text-color);
   opacity: 0.5;
 }
 
@@ -214,6 +220,11 @@
   padding-block-end: 25px;
   border: 2px solid currentColor;
   border-block-start: none;
+}
+
+.like-icon {
+  block-size: 36px;
+  inline-size: 39px;
 }
 
 .card__icon-button {
@@ -239,7 +250,8 @@
   background-color: var(--background-color);
   appearance: none;
   font-size: 14px;
-  padding: 8px 35px;
+  min-inline-size: 130px;
+  min-block-size: 40px;
 }
 
 .button::before {
@@ -271,7 +283,7 @@
 
 .button__text {
   font-size: 14px;
-  line-height: 12.6px;
+  line-height: 0.9;
   font-family: var(--header-text-font, sans-serif);
   mix-blend-mode: difference;
   color: var(--button-text-color);
@@ -298,6 +310,7 @@
   align-items: center;
   gap: 10px;
   margin: 50px auto 100px;
+  border: 2px solid currentColor;
 }
 
 .modal {
@@ -313,8 +326,10 @@
   color: var(--main-text-color);
   position: fixed;
   inset: 0;
-  transition: opacity 0.3s ease-in-out;
+  transition: opacity 2s ease-in-out;
   display: grid;
+  grid-template-rows: repeat(2, min-content);
+  gap: 30px;
 }
 
 .modal:not([open]) {
@@ -326,12 +341,6 @@
   display: flex;
   align-items: center;
   gap: 16px;
-}
-
-.modal[open] {
-  display: grid;
-  grid-template-rows: repeat(2, min-content);
-  gap: 30px;
 }
 
 dialog::backdrop {
@@ -354,23 +363,32 @@ dialog::backdrop {
   .save-button {
     flex-direction: row;
   }
+
   .floppy {
     inline-size: 22px;
     block-size: 22px;
-  }
-  /*без этого костыля на десктопе карточки уезжают не по макету*/
-  .main__content_list {
-    gap: 53px;
   }
 
   .modal {
     max-inline-size: 353px;
     padding: 30px 30px;
   }
+
+  .main__content_img_logo {
+    inset-inline-end: 25px;
+  }
+  .main__content_text_wrapper {
+    padding: 30px 21px 24px 25px;
+  }
 }
 
-@supports (-webkit-text-stroke: 1px var(--main-text-color, #000000)) {
-  .stroke {
+@supports (
+  (-webkit-text-stroke: 1px var(--main-text-color, #000000)) or
+    (text-stroke: 1px var(--main-text-color, #000000))
+) {
+  .main__content_img_logo {
+    text-shadow: none;
     -webkit-text-stroke: 1px var(--main-text-color, #000000);
+    stroke: 1px var(--main-text-color, #000000);
   }
 }
