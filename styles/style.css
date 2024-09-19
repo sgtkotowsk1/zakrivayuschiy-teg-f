@@ -78,6 +78,10 @@
   margin-block-end: 20px;
 }
 
+.link {
+  cursor: pointer;
+}
+
 .header__subtitle {
   margin-block-end: 22px;
   font-size: clamp(14px, 0.845vw + 0.677rem, 23px);
