@@ -15,6 +15,7 @@
 
 .like-icon .sparks {
   opacity: 0;
+  fill: var(--heart-fill-color);
 }
 
 .like-icon .main-body {
@@ -69,10 +70,6 @@
 .like-icon.is-liked .contour {
   fill: var(--heart-fill-color);
   transition: fill 0.3s linear 0.06s;
-}
-
-.like-icon .sparks {
-  fill: var(--heart-fill-color);
 }
 
 .like-icon.is-liked .sparks {

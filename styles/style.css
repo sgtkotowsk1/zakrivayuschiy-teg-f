@@ -368,3 +368,9 @@ dialog::backdrop {
     padding: 30px 30px;
   }
 }
+
+@supports (-webkit-text-stroke: 1px var(--main-text-color, #000000)) {
+  .stroke {
+    -webkit-text-stroke: 1px var(--main-text-color, #000000);
+  }
+}
