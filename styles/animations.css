@@ -13,6 +13,11 @@
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
 
+.like-icon {
+  block-size: 36px;
+  inline-size: 39px;
+}
+
 .like-icon .sparks {
   opacity: 0;
   fill: var(--heart-fill-color);

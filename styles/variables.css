@@ -5,10 +5,12 @@
   --white-color: #ffffff;
   --red-color: #f20000;
   --header-font-weight: 700;
+  --max-page-size: 700px;
   --main-text-font-weight: 400;
   --main-text-font: "Inter", sans-serif;
   --header-text-font: "PressStart2P", fantasy;
-  --background-color: #ffffff;
+  --background-color: var(--white-color: #ffffff;)
+  --main-text-color: var(--black-color, #000000);
   --border-color: var(--black-color, #000000);
   --button-text-color: var(--white-color, #ffffff);
   --side-padding-header: clamp(0px, 35.211vw - 8.253rem, 372px);
